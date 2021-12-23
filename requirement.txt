@@ -2,5 +2,5 @@ pandas
 sqlalchemy
 psycopg2
 shutil
-os
 glob
+os
