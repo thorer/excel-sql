@@ -34,13 +34,11 @@ def action():
         df_sources = pd.read_csv(os.path.join(new_ex, files))
         engine = create_engine('postgresql+psycopg2://thomasnoirclerc:tiger@localhost:5662/thomasnoirclerc')
         df_sources.to_sql('test8', con = engine, if_exists = 'append',index=False)
-        with engine.connect() as con :
-            con.execute('ALTER TABLE "test8" ADD PRIMARY KEY ("trigram");')
-        shutil.move(os.path.join(new_ex, files),old)
     
+
 if __name__ == '__main__':
     print('Application started')
 
     while True:
-        def action()
+        action()
 
