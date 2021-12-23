@@ -2,9 +2,9 @@ FROM python:3.9-slim-buster
 
 EXPOSE 8080
 
-COPY requirements.txt requirements.txt
+ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-COPY . .
+COPY test.py test.py
 
-ENTRYPOINT [ "python3", "/test.py"] 
+ENTRYPOINT [ "python3","-u", "test.py"] 
